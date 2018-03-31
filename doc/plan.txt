@@ -1,0 +1,20 @@
+CubeSolver v2
+
+Tym razem mądrzejsze podejście, rozwiązania będziemy szukać algorytmem A*.
+Wyznaczanie funkcji f(x)
+
+f(x) = h(x) - g(x)
+
+Przy czym g(x) = liczba ruchów od stanu początkowego do aktualnego
+h(x) to funkcja heurystyczna, h(x) = Suma dla każdej ściany : (liczba par pól tego samego koloru na danej ścianie) ^ 2
+
+Prioretyzujemy węzły o największej wartości funkcji f(x)
+
+Znaczną optymalizacją jest wygenerowanie wszystkich ustawień do 8 ruchów od stanu początkowego - stosujemy technikę 'meet in the middle'
+
+Kostkę będziemy reprezentować tak samo jak w pierwszej wersji solvera, ale teraz mam nadzieję jakoś ładniej się to zrobi. Do trzymania kostki i wykonywania operacji na niej będzie służyc klasa Cube
+
+Klasy:
+Cube - reprezentacja kostki
+Solve - szukanie rozwiązania
+Gen - preprocessing, generowanie rozwiązań do 8 ruchów od ułożonej kostki
